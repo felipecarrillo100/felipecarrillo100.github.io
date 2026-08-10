@@ -1,29 +1,207 @@
-Felipe Carrillo | Developer Hub
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felipe Carrillo | Developer Hub</title>
+  <meta name="description" content="Felipe Carrillo — full-stack tinkerer, geospatial nerd, and serial revivor of abandoned open-source libraries." />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <span class="logo">FC</span>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌙</button>
+    </div>
+  </header>
 
-  
-    
-      Felipe Carrillo
-      Developer, open-source contributor, and software builder.
-    
+  <main>
+    <section class="hero wrap">
+      <div class="avatar" aria-hidden="true">FC</div>
+      <h1>Hi, I'm Felipe <span class="wave">👋</span></h1>
+      <p class="tagline">
+        <span id="typed"></span><span class="cursor" aria-hidden="true">|</span>
+      </p>
+      <p class="hero-bio">
+        I build small tools that fix specific annoyances — then can't stop maintaining them.
+        119+ repos, 39 npm packages, and a soft spot for reviving open-source libraries
+        everyone else gave up on.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/felipecarrillo100" target="_blank" rel="noopener">GitHub Profile</a>
+        <a class="btn btn-secondary" href="https://www.npmjs.com/~felipecarrillo100" target="_blank" rel="noopener">npm Packages</a>
+      </div>
+    </section>
 
-    
-      
-        base62str
-        Lightweight Base62 encoding and decoding library.
-      
+    <section id="about" class="about wrap">
+      <h2>A bit about me</h2>
+      <p class="section-intro">
+        No grand mission statement here — just a developer who enjoys making things work
+        a little better than they used to.
+      </p>
+      <ul class="traits">
+        <li>
+          <span class="trait-icon">🗺️</span>
+          <div>
+            <h3>Geospatial explorer</h3>
+            <p>I spend a lot of time around LuciadRIA, WFS, and OGC APIs — building tools that make maps and 3D data easier to work with.</p>
+          </div>
+        </li>
+        <li>
+          <span class="trait-icon">♻️</span>
+          <div>
+            <h3>Serial library reviver</h3>
+            <p>Several of my packages are modern forks of great React libraries that got abandoned — updated, patched, and kept alive for React 18 & 19.</p>
+          </div>
+        </li>
+        <li>
+          <span class="trait-icon">🧩</span>
+          <div>
+            <h3>Tiny-tool addict</h3>
+            <p>If I do something manually twice, it becomes a small npm package by the third time. base62str exists because of exactly this.</p>
+          </div>
+        </li>
+        <li>
+          <span class="trait-icon">🕹️</span>
+          <div>
+            <h3>Curiosity-driven builder</h3>
+            <p>Dual joysticks on an iPad, device-orientation hooks, gamepad support for React — some projects exist purely because "can this be done?"</p>
+          </div>
+        </li>
+        <li>
+          <span class="trait-icon">☕</span>
+          <div>
+            <h3>Runs on coffee</h3>
+            <p>Every commit after 3pm should probably be reviewed twice. I stand by all of them anyway.</p>
+          </div>
+        </li>
+      </ul>
+      <button id="fun-fact-btn" class="btn btn-ghost" type="button">Give me a random fun fact 🎲</button>
+      <p id="fun-fact" class="fun-fact" aria-live="polite"></p>
+    </section>
 
-      
-        npm Packages
-        Check out my published JavaScript / Node.js packages.
-      
+    <section id="projects" class="projects wrap">
+      <h2>Featured builds</h2>
+      <p class="section-intro">The two I'm currently most excited about.</p>
+      <div class="project-grid featured-grid">
+        <article class="project-card featured">
+          <div class="project-rank">✨ Featured</div>
+          <h3>md-editor</h3>
+          <p>A markdown editor and live-preview viewer for the browser — multiple documents, export to Markdown/HTML/PDF, share-via-link, and a VS Code–style command palette. Built on top of react-dockable-desktop.</p>
+          <div class="project-meta">
+            <span class="badge">Live demo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://md-editor-pied.vercel.app" target="_blank" rel="noopener">Live Demo</a>
+            <a href="https://github.com/felipecarrillo100/md-editor" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
 
-      
-        GitHub Profile
-        Explore all active repositories and open-source contributions.
-      
-    
+        <article class="project-card featured">
+          <div class="project-rank">✨ Featured</div>
+          <h3>react-dockable-desktop</h3>
+          <p>A premium, state-of-the-art window manager and dockable layout engine for React — fluid grid splits, tabbed groups, floating resizable windows, zero-unmount state preservation, context menus, and i18n. It's the engine powering md-editor's UI.</p>
+          <div class="project-meta">
+            <span class="badge">~1.2k downloads/mo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/felipecarrillo100/react-dockable-desktop" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/react-dockable-desktop" target="_blank" rel="noopener">npm</a>
+          </div>
+        </article>
+      </div>
 
-    
-      © Felipe Carrillo. Hosted on GitHub Pages.
+      <h2 class="section-heading-spaced">Most-downloaded projects</h2>
+      <p class="section-intro">A few of my other npm packages, ranked by last month's downloads.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-rank">#1</div>
+          <h3>base62str</h3>
+          <p>Encode a string (or byte array) into Base62, and decode it back. Small, dependency-free, and does exactly one thing well.</p>
+          <div class="project-meta">
+            <span class="badge">~24.7k downloads/mo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/felipecarrillo100/base62str" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/base62str" target="_blank" rel="noopener">npm</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-rank">#2</div>
+          <h3>react-bootstrap-submenu</h3>
+          <p>Adds proper SubMenu functionality to React-Bootstrap 2.0+, compatible with React 18 & 19 — filling a gap the original library never covered.</p>
+          <div class="project-meta">
+            <span class="badge">~5.2k downloads/mo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/felipecarrillo100/react-bootstrap-submenu" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/react-bootstrap-submenu" target="_blank" rel="noopener">npm</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-rank">#3</div>
+          <h3>react-jsoneditor-wrapper</h3>
+          <p>A React + TypeScript wrapper around the excellent jsoneditor by josdejong, so it plays nicely inside modern React apps.</p>
+          <div class="project-meta">
+            <span class="badge">~2.4k downloads/mo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/felipecarrillo100/react-jsoneditor-wrapper" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/react-jsoneditor-wrapper" target="_blank" rel="noopener">npm</a>
+          </div>
+        </article>
+      </div>
+      <p class="more-projects">
+        That's 5 of them — there are 30+ more npm packages and 119 repos covering
+        React components, geospatial tools, and the occasional weird experiment.
+        <a href="https://github.com/felipecarrillo100?tab=repositories" target="_blank" rel="noopener">See them all on GitHub →</a>
+      </p>
+    </section>
+
+    <section id="stats" class="stats wrap">
+      <h2>By the numbers</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-number" data-target="119">0</span>
+          <span class="stat-label">public repos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="39">0</span>
+          <span class="stat-label">npm packages</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="2016">0</span>
+          <span class="stat-label">on GitHub since</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="25">0</span>
+          <span class="stat-label">k+ downloads/mo (base62str)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Let's talk shop.</p>
+      <div class="footer-links">
+        <a href="https://github.com/felipecarrillo100" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.npmjs.com/~felipecarrillo100" target="_blank" rel="noopener">npm</a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Felipe Carrillo. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
