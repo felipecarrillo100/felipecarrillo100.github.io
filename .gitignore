@@ -1,0 +1,8 @@
+# IntelliJ IDEA
+.idea/
+
+# VSCode
+.vscode/
+
+# Claude
+.claude/
