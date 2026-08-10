@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Felipe Carrillo</title>
+  <meta name="description" content="Privacy policy for felipecarrillo100.github.io and its linked project demos." />
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8961380325850669"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="logo" style="text-decoration:none;">FC</a>
+      <nav class="site-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#stats">Stats</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal wrap">
+      <h1>Privacy Policy</h1>
+      <p class="section-intro" style="margin-bottom:24px;">Last updated: 11 August 2026</p>
+
+      <p>This policy covers <strong>felipecarrillo100.github.io</strong> and the project demo pages linked from it (including, among others, the base62str demo). Each of those demos is a separate open-source project, but they share this one policy and this one advertising setup, since none of them collect data of their own beyond what's described here.</p>
+
+      <h2>What this site collects</h2>
+      <p>Nothing personal, and nothing on a server. Every page here — the hub site and the linked project demos — is a static site with no accounts, no sign-in, and no backend. The only browser storage used is a single <code>localStorage</code> entry on this hub site to remember your light/dark theme choice; it never leaves your browser and isn't sent anywhere.</p>
+
+      <h2>Advertising (Google AdSense)</h2>
+      <p>This site and its linked demos show ads served by <strong>Google AdSense</strong>. Google and its partners use cookies and similar technologies to serve ads based on your prior visits to this site or other sites, and may use non-personalized or personalized advertising depending on your region and your consent choices.</p>
+      <p>You can learn more about how Google uses this information, and control your ad settings, here:</p>
+      <ul>
+        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites that use its services</a></li>
+        <li><a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a> — view or opt out of personalized advertising</li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      </ul>
+
+      <h2>Your consent choices</h2>
+      <p>Visitors in the European Economic Area, the UK, and Switzerland are shown a consent message (via a Google-certified consent management platform) before any personalized ad cookies are set, with clear options to consent, decline, or manage choices in detail. You can change your choice at any time by clearing your browser's cookies for this site and reloading the page.</p>
+
+      <h2>Children's privacy</h2>
+      <p>These sites are not directed at children under 13, and no data is knowingly collected from children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>This policy may be updated occasionally to reflect changes in how this site or its advertising works. The "last updated" date above will always reflect the latest revision.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy can be raised via <a href="https://github.com/felipecarrillo100" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Let's talk shop.</p>
+      <div class="footer-links">
+        <a href="https://github.com/felipecarrillo100" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.npmjs.com/~felipecarrillo100" target="_blank" rel="noopener">npm</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+      <p class="copyright">© <span id="year"></span> Felipe Carrillo. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem('theme');
+
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        root.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '☀️';
+      } else {
+        root.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+      }
+    }
+
+    applyTheme(storedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = root.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      localStorage.setItem('theme', next);
+      applyTheme(next);
+    });
+  </script>
+</body>
+</html>

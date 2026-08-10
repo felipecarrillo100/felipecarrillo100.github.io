@@ -457,3 +457,40 @@ section h2 {
     display: none;
   }
 }
+
+/* Legal content (privacy policy, etc.) */
+
+.legal {
+  max-width: 680px;
+}
+
+.legal h1 {
+  font-size: 2rem;
+}
+
+.legal h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 32px;
+}
+
+.legal p {
+  color: var(--text-dim);
+}
+
+.legal ul {
+  color: var(--text-dim);
+  padding-left: 20px;
+}
+
+.legal li {
+  margin-bottom: 6px;
+}
+
+.legal code {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+}
